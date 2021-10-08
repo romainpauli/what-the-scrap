@@ -1,24 +1,29 @@
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
+import { ref } from 'vue'
+import { useStore } from 'vuex'
 import HelloWorld from './components/HelloWorld.vue'
+import Signin from './components/Signin.vue'
 import WtsHeader from './components/WtsHeader.vue'
 import WtsFooter from './components/WtsFooter.vue'
+
+defineProps({
+  msg: String
+})
+
+const count = ref(0)
+const store = useStore()
 </script>
 
 <template>
-  <div class="flex flex-col min-h-screen relative">
-    <WtsHeader class="sticky top-0" />
-    <div class="flex-grow">
-      <div class="container mx-auto" >
-        <div class="w-80 h-80 border-4 border-dotted border-pink-200 my-10 p-24">
-          drop the scrap
-        </div>
-        <img alt="what the scrap logo" src="./assets/what-the-scrap.svg" />
-        <img alt="recycling logo" src="./assets/recycling.svg" class="h-16 w-16" />
-        <HelloWorld msg="coucou" />
-       </div>
+  <div class="w-full">
+    <signin v-if="store.state.token === ''" class="h-full w-full" />
+    <div class="flex flex-col min-h-screen relative" v-else >
+      <WtsHeader class="sticky top-0" />
+      <div class="flex-grow">
+      <router-view />
+      </div>
+      <WtsFooter class="flex-none" />
+      <div class="fixed bg-pink-400 rounded-full w-16 h-16 bottom-10 right-10 border-pink-800 border-b-4 shadow"></div>
     </div>
-    <WtsFooter class="flex-none" />
   </div>
 </template>
