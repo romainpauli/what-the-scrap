@@ -14,7 +14,8 @@ import WtsFooter from './components/WtsFooter.vue'
         <div class="w-80 h-80 border-4 border-dotted border-pink-200 my-10 p-24">
           drop the scrap
         </div>
-        <img alt="Vue logo" src="./assets/logo.png" />
+        <img alt="what the scrap logo" src="./assets/what-the-scrap.svg" />
+        <img alt="recycling logo" src="./assets/recycling.svg" class="h-16 w-16" />
         <HelloWorld msg="coucou" />
        </div>
     </div>
