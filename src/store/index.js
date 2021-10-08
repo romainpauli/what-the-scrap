@@ -8,8 +8,8 @@ import {
   // import * as AWS from 'aws-sdk/global'
   
 const poolData = {
-    UserPoolId: process.env.VUE_APP_UserPoolId,//  process.env.VUE_APP_UserPoolId,
-    ClientId: process.env.VUE_APP_ClientId // process.env.VUE_APP_ClientId
+    UserPoolId: process.env.VITE_UserPoolId,//  process.env.VITE_UserPoolId,
+    ClientId: process.env.VITE_ClientId // process.env.VUE_APP_ClientId
 }
 const userPool = new CognitoUserPool(poolData)
   let cognitoUser = null
