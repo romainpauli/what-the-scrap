@@ -7,9 +7,11 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@j-t-mcc/vue3-chartjs": "^1.1.4",
     "@tailwindcss/forms": "^0.3.4",
     "add": "^2.0.6",
     "amazon-cognito-identity-js": "^5.2.0",
+    "chart.js": "^3.5.1",
     "ohmyfetch": "^0.3.1",
     "vite-plugin-vue-env": "^1.0.5",
     "vue": "^3.2.16",

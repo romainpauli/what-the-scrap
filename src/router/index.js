@@ -14,7 +14,7 @@ const routes = [
         component: WtsPhoto,
     },
     { 
-        path: '/material/:id',
+        path: '/material/:id/:name',
         name: 'material',
         component: WtsMaterial
     }
