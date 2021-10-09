@@ -31,22 +31,22 @@ onMounted(async () => {
 
 <template>
     <div class="container mx-auto py-10">
-        <router-link to="/" class="text-lg italic text-gray-500 font-extralight underline" >back to the list</router-link>
-        <h1 class="font-extralight text-6xl">
+        <router-link to="/" class="text-lg italic text-gray-500 font-extralight underline ml-16 lg:ml-0" >back to the list</router-link>
+        <h1 class="font-extralight text-6xl text-center lg:text-left">
             {{ route.params.name }}
         </h1>
-        <div class="grid grid-cols-4 gap-4 pt-16 text-4xl font-extralight text-right" >
-            <div class="" >
+        <div class="lg:grid grid-cols-4 gap-4 pt-16 text-4xl font-extralight text-center lg:text-right" >
+            <div class="my-2" >
                 <div class="text-base" >incoming</div>
-                <div>{{ laliste.kpi.incoming.toFixed(0) }} KG</div>
+                <div>{{ laliste.kpi.incoming }} KG</div>
             </div>
-            <div class="" >
+            <div class="my-2" >
                 <div class="text-base" >outgoing</div>
-                <div>{{ laliste.kpi.outgoing.toFixed(0) }} KG</div>
+                <div>{{ laliste.kpi.outgoing }} KG</div>
             </div>
-            <div class="" >
+            <div class="my-2" >
                 <div class="text-base" >difference</div>
-                <div>{{ laliste.kpi.diff.toFixed(0) }} KG</div>
+                <div>{{ laliste.kpi.diff }} KG</div>
             </div>
             <div>
                 <img v-if="laliste.kpi.signal > 0" alt="search logo magnifier" src="../assets/metal_OK.svg" class="h-16 inline" />

@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full h-[600px] p-10 shadow" >
+  <div class="h-full h-[400px] lg:h-[600px] p-10 shadow" >
     <vue3-chart-js
         :id="lineChart.id"
         :type="lineChart.type"

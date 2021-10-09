@@ -67,6 +67,11 @@
             </template>
         </div>
         <p class="text-4xl font-extralight text-center" >{{ showname }}</p>
-        <p class="text-2xl font-extralight text-center italic" >{{ ic }} %</p>
+        <p v-if="ic > 0" class="text-2xl font-extralight text-center italic my-4" >
+            <img v-if="ic >= 10 && ic < 15" alt="search logo bad" src="../assets/Smiley_Bad.svg" class="h-16 inline" />
+            <img v-if="ic >= 15 && ic < 30" alt="search logo middle" src="../assets/Smiley_neutre.svg" class="h-16 inline" />
+            <img v-if="ic >= 30" alt="search logo happy" src="../assets/Smiley_Happy.svg" class="h-16 inline" />
+        </p>
+        
     </div>
 </template>
