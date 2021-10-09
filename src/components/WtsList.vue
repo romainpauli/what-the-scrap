@@ -16,7 +16,7 @@ const filteredList = computed(() => deuxliste.filter(item => item.searchterm.inc
 <template>
     <input type="text" class="p-4 text-xl border w-full my-2" v-model="scrapfilter" />
     <ul>
-        <li v-for="item in filteredList" :key="item.label" class="shadow text-xl p-4 my-2 grid grid-cols-6">
+        <router-link as="li" v-for="item in filteredList" :key="item.label" :to="'/material/' + item.label"  class="shadow text-xl p-4 my-2 grid grid-cols-6">
             <p>
                 up
             </p>
@@ -26,6 +26,6 @@ const filteredList = computed(() => deuxliste.filter(item => item.searchterm.inc
             <p class="text-right">
                 {{ item.stock }}
             </p>
-        </li>
+        </router-link>>
     </ul>
 </template>

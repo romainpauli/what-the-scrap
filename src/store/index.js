@@ -8,8 +8,8 @@ import {
   // import * as AWS from 'aws-sdk/global'
   
 const poolData = {
-    UserPoolId: 'eu-west-1_7p1qB414x', // should be repalce with env variable process.env.VUE_APP_UserPoolId,
-    ClientId: 'sbdc00v7i5eja3r28tue6ouiu' // should be repalce with env variable process.env.VUE_APP_UserPoolId,
+    UserPoolId: 'eu-west-1_7RlysgZvj', // should be repalce with env variable process.env.VUE_APP_UserPoolId,
+    ClientId: '14g0ghm5soa032udv4pcamqg0u' // should be repalce with env variable process.env.VUE_APP_UserPoolId,
 }
 const userPool = new CognitoUserPool(poolData)
   let cognitoUser = null
