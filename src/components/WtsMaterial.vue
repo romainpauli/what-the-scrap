@@ -38,15 +38,18 @@ onMounted(async () => {
         <div class="lg:grid grid-cols-4 gap-4 pt-16 text-4xl font-extralight text-center lg:text-right" >
             <div class="my-2" >
                 <div class="text-base" >incoming</div>
-                <div>{{ laliste.kpi.incoming }} KG</div>
+                <div v-if="hydrated" >{{ laliste.kpi.incoming }} KG</div>
+                <div v-else class="w-full h-full bg-gray-200 animate-pulse"></div>
             </div>
             <div class="my-2" >
                 <div class="text-base" >outgoing</div>
-                <div>{{ laliste.kpi.outgoing }} KG</div>
+                <div v-if="hydrated" >{{ laliste.kpi.outgoing }} KG</div>
+                <div v-else class="w-full h-full bg-gray-200 animate-pulse"></div>
             </div>
             <div class="my-2" >
                 <div class="text-base" >difference</div>
-                <div>{{ laliste.kpi.diff }} KG</div>
+                <div v-if="hydrated" >{{ laliste.kpi.diff }} KG</div>
+                <div v-else class="w-full h-full bg-gray-200 animate-pulse"></div>
             </div>
             <div>
                 <img v-if="laliste.kpi.signal > 0" alt="search logo magnifier" src="../assets/metal_OK.svg" class="h-16 inline" />
@@ -58,5 +61,6 @@ onMounted(async () => {
             <!-- <p>{{ laliste.l }}</p> -->
             <WtsChart :obj="laliste.l" class="w-full mt-10" />
         </div>
+        <div v-else class="h-[600px] bg-gray-200 animate-pulse mt-10" ></div>
     </div>
 </template>

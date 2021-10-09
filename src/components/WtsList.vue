@@ -46,5 +46,8 @@ onMounted(async () => {
                 </p>
             </router-link>
         </ul>
+        <ul v-else class="mb-10 px-4 lg:px-0">
+            <li v-for="i in [1,2,3,4,5,6,7,8,9,10,12,13,14,15,16,17,18,19,20]" :key="i" class="h-16 shadow text-xl p-4 my-2 grid grid-cols-6 border border-white bg-gray-100 animate-pulse" ></li>
+        </ul>
     </div>
 </template>
