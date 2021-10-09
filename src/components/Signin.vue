@@ -22,6 +22,7 @@ onMounted(() => store.dispatch('retrieveUser'))
         <input type="text" class="border-2 text-xl p-2 my-2" v-model="usr" />
         <label>Mot de passe</label>
         <input type="password" class="border-2 text-xl p-2 my-2" v-model="pswrd" />
+        <p v-if="store.state.erreur !== ''" class="text-red-500 text-lg italic text-center">User or password is not valid :(</p>
         <button class="bg-gray-600 text-white py-2 border-gray-800 border-b-4 mt-4 hover:bg-gray-800 duration-150 ease-in-out" @click="login" >Let's scrap</button>
       </div>
     </div>

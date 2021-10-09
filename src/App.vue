@@ -22,7 +22,9 @@ const route = useRoute()
     <div class="flex flex-col min-h-screen relative" v-else >
       <WtsHeader class="sticky top-0" />
       <div class="flex-grow">
-      <router-view />
+      <transition name="fade">
+        <router-view />
+      </transition>
       </div>
       <WtsFooter class="flex-none" />
       <router-link v-if="!route.path.includes('photo')" to="/photo" class="fixed bg-pink-400 rounded-full w-16 h-16 bottom-10 right-10 border-pink-800 border-b-4 shadow">
@@ -31,3 +33,12 @@ const route = useRoute()
     </div>
   </div>
 </template>
+
+<style scoped>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+</style>
