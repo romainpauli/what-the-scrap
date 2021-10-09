@@ -16,7 +16,7 @@ onMounted(() => store.dispatch('retrieveUser'))
 
 <template>
   <div class="h-screen w-full bg-[#31C8C8] py-24" >
-      <div class="flex flex-col mx-auto shadow p-10 max-w-[500px] bg-white">
+      <div class="flex flex-col shadow p-10 max-w-[500px] bg-white mx-6 md:mx-auto">
         <img alt="what the scrap logo" src="../assets/what-the-scrap.svg" class="h-60 w-60 mx-auto" />
         <label>E-mail</label>
         <input type="text" class="border-2 text-xl p-2 my-2" v-model="usr" />
