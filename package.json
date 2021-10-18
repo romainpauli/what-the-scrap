@@ -9,6 +9,7 @@
   "dependencies": {
     "@j-t-mcc/vue3-chartjs": "^1.1.4",
     "@tailwindcss/forms": "^0.3.4",
+    "@vueuse/motion": "^2.0.0-beta.4",
     "add": "^2.0.6",
     "amazon-cognito-identity-js": "^5.2.0",
     "chart.js": "^3.5.1",

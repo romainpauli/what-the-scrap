@@ -59,6 +59,7 @@
             </template>
             <template v-else>
             <img alt="Recycling logo" src="../assets/photoupload.svg" class="h-60 w-60 mx-auto opacity-50" />
+            <p class="italic text-red-500 text-center" >To avoid cost, the image processing model is off, please send me an email to romain.pauli@vinum.swiss to turn it on.</p>
             <p class="italic text-gray-500 text-center" >Click or drop an image here</p>
             <input
                       type="file"
@@ -72,7 +73,7 @@
                     />
             </template>
         </div>
-        
+
         <p v-if="ic > 10" class="text-4xl font-extralight text-center" >{{ showname }}</p>
         <p v-if="ic < 10" class="text-4xl font-extralight text-center" >{{ showname }}</p>
         <p v-if="ic > 0" class="text-2xl font-extralight text-center italic my-4" >

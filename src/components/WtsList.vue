@@ -32,7 +32,7 @@ onMounted(async () => {
             </div>
         </div>
         <ul v-if="hydrated" class="mb-10 px-4 lg:px-0">
-            <router-link as="li" v-for="item in laliste.l.filter(item => item.searchterm.includes(scrapfilter.toLowerCase()))" :key="item.name" :to="'/material/' + item.sorte + '/' + item.name.replace('/', '%2F')"  class="shadow text-xl p-4 my-2 grid grid-cols-6 border border-white hover:bg-gray-200 hover:border-[#31C8C8] transition duration-75 ease-in-out">
+            <router-link as="li" v-for="item in laliste.l.filter(item => item.searchterm.includes(scrapfilter.toLowerCase()))" :key="item.name" :to="'/material/' + item.sorte + '/' + item.name.replace('/', '%2F')"  class="shadow text-xl p-4 my-2 grid grid-cols-6 border border-white hover:bg-gray-200 hover:border-[#31C8C8] transition duration-75 ease-in-out" v-motion-fade >
                 <p class="col-span-5 lg:col-span-1" >
                     {{ item.sorte }}
                 </p>
